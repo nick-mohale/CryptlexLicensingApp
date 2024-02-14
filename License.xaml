@@ -8,7 +8,53 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="License">
 
-    <Grid>
-        <TextBlock Text="License" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Labels and Textboxes for each field -->
+        <TextBlock Text="Product:" Grid.Row="0"/>
+        <TextBox Text="{Binding Product}" Grid.Row="0" Grid.Column="1" Width="200" Margin="0,0,10,5"/>
+
+        <TextBlock Text="Customer:" Grid.Row="1"/>
+        <TextBox Text="{Binding Customer}" Grid.Row="1" Grid.Column="1" Width="200" Margin="0,0,10,5"/>
+
+        <TextBlock Text="Product Version:" Grid.Row="2"/>
+        <TextBox Text="{Binding ProductVersion}" Grid.Row="2" Grid.Column="1" Width="200" Margin="0,0,10,5"/>
+
+        <TextBlock Text="Validity:" Grid.Row="3"/>
+        <TextBox Text="{Binding Validity}" Grid.Row="3" Grid.Column="1" Width="200" Margin="0,0,10,5"/>
+
+        <TextBlock Text="Activations:" Grid.Row="4"/>
+        <TextBox Text="{Binding Activations}" Grid.Row="4" Grid.Column="1" Width="200" Margin="0,0,10,5"/>
+
+        <TextBlock Text="Status:" Grid.Row="5"/>
+        <TextBox Text="{Binding Status}" Grid.Row="5" Grid.Column="1" Width="200" Margin="0,0,10,5"/>
+
+        <TextBlock Text="Tags:" Grid.Row="6"/>
+        <TextBox Text="{Binding Tags}" Grid.Row="6" Grid.Column="1" Width="200" Margin="0,0,10,5"/>
+
+        <TextBlock Text="Expiration Date:" Grid.Row="7"/>
+        <DatePicker SelectedDate="{Binding ExpirationDate}" Grid.Row="7" Grid.Column="1" Width="200" Margin="0,0,10,5"/>
+
+        <!-- Generate Key Button -->
+        <Button Content="Generate Key" Grid.Row="7" Width="90" HorizontalAlignment="Left" Margin="23,83,0,-68" Click="BtnGenerateKey_Click"/>
+
+        <!-- Activate Button -->
+        <Button Content="Activate" Grid.Row="7" Width="89" HorizontalAlignment="Right" Margin="0,151,295,-141" Click="BtnActivate_Click" RenderTransformOrigin="-1.23,2.384"/>
+
+        <!-- Reset Button -->
+        <Button Content="Reset" Grid.Row="7" Width="100" HorizontalAlignment="Left" Margin="261,151,0,-141" Click="BtnReset_Click" RenderTransformOrigin="1.615,0.831"/>
+
+        <!-- Label to display generated key -->
+        <Label Content="{Binding GeneratedKey}" Grid.Row="7" HorizontalContentAlignment="Center" Margin="146,69,113,-82"/>
     </Grid>
 </Page>

@@ -24,5 +24,15 @@ namespace CryptlexLicensingApp
         {
             InitializeComponent();
         }
+
+        private void BtnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+          //  Product.Content = new Product();
+        }
+
+        private void BtnReset_Click(object sender, RoutedEventArgs e)
+        {
+           // Main.Content = new Product();
+        }
     }
 }

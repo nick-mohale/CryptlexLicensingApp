@@ -8,7 +8,45 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Product">
 
-    <Grid>
-        <TextBlock Text="Product" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="0"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Labels and Textboxes for each field -->
+        <TextBlock Text="Name:" Grid.Row="0" Margin="0,0,0,23" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding Name}" Grid.Row="0" Margin="285,0,295,5"/>
+
+        <TextBlock Text="Total Licenses:" Grid.Row="1" Margin="0,0,0,23" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding TotalLicenses}" Grid.Row="1" Margin="285,0,295,5"/>
+
+        <TextBlock Text="Total Trial Activations:" Grid.Row="2" Margin="0,0,0,23" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding TotalTrialActivations}" Grid.Row="2" Margin="285,0,295,5"/>
+
+        <TextBlock Text="Total Product Versions:" Grid.Row="3" Margin="0,0,0,23" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding TotalProductVersions}" Grid.Row="3" Margin="285,0,295,5"/>
+
+        <TextBlock Text="Total Releases:" Grid.Row="4" Margin="0,0,0,23" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding TotalReleases}" Grid.Row="4" Margin="285,0,295,5"/>
+
+        <TextBlock Text="Creation Date:" Grid.Row="5" Margin="0,0,0,26" Grid.RowSpan="3"/>
+        <TextBox Text="{Binding CreatedAt, StringFormat={}{0:yyyy-MM-dd HH:mm:ss}}" Grid.Row="5" Margin="285,0,295,5" IsReadOnly="True"/>
+
+        <Button Content="Update" Grid.Row="7" Width="89" HorizontalAlignment="Right" Margin="0,3,295,1" Click="BtnUpdate_Click" RenderTransformOrigin="0.554,0.152"/>
+        <Button Content="Reset" Grid.Row="7" Width="81" HorizontalAlignment="Left" Margin="285,3,0,1" Click="BtnReset_Click" RenderTransformOrigin="1.358,0.451"/>
+
+        <!-- Status TextBlock -->
+        <TextBlock Text="{Binding Status}" Grid.Row="7" Margin="0,5,0,5" Foreground="Green" HorizontalAlignment="Center" Width="0"/>
+
     </Grid>
 </Page>
