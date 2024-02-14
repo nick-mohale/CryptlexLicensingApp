@@ -24,8 +24,8 @@
         </Grid.RowDefinitions>
 
         <!-- Labels and Textboxes for each field -->
-        <TextBlock Text="Name:" Grid.Row="0" Margin="0,0,0,23" Grid.RowSpan="2"/>
-        <TextBox Text="{Binding Name}" Grid.Row="0" Margin="285,0,295,5"/>
+        <TextBlock Text="Product:" Grid.Row="0" Margin="0,0,0,23" Grid.RowSpan="2"/>
+        <ComboBox ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedName}" Grid.Row="0" Margin="285,0,295,5"/>
 
         <TextBlock Text="Total Licenses:" Grid.Row="1" Margin="0,0,0,23" Grid.RowSpan="2"/>
         <TextBox Text="{Binding TotalLicenses}" Grid.Row="1" Margin="285,0,295,5"/>
