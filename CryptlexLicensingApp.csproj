@@ -7,4 +7,25 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Cryptlex.LexActivator" Version="3.26.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\nickm\.nuget\packages\cryptlex.lexactivator\3.26.0\build\..\runtimes\win-x64\native\LexActivator.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\nickm\.nuget\packages\cryptlex.lexactivator\3.26.0\build\..\runtimes\win-x64\native\LexActivator.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\nickm\.nuget\packages\cryptlex.lexactivator\3.26.0\build\..\runtimes\win-x64\native\LexActivator.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\nickm\.nuget\packages\cryptlex.lexactivator\3.26.0\build\..\runtimes\win-x64\native\LexActivator.dll" />
+  </ItemGroup>
+
 </Project>

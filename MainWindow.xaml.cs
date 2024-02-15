@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cryptlex;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace CryptlexLicensingApp
         public MainWindow()
         {
             InitializeComponent();
+       
         }
 
         private void BtnClickProduct(object sender, RoutedEventArgs e)
